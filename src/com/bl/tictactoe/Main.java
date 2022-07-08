@@ -7,6 +7,8 @@ public class Main {
         game.Board();
         game.showBoard();
         game.selectOption();
-        game.selectLocation();
+        //game.selectLocation();
+        char turn = game.selectPlayer();
+        game.selectLocation(turn);
     }
 }
