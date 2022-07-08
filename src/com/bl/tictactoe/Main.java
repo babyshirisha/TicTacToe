@@ -7,5 +7,6 @@ public class Main {
         game.Board();
         game.showBoard();
         game.selectOption();
+        game.selectLocation();
     }
 }

@@ -23,4 +23,22 @@ public class TicTacToe {
         computerLetter = (userLetter == 'X' ? 'O' : 'X');
         System.out.println("User Letter: " + userLetter + ", " + "Computer Letter: " + computerLetter);
     }
+    public void selectLocation() {
+        System.out.println("select location from 1-9");
+        int userMove = input.nextInt();
+        do {
+            if (userMove > index.length - 1) {
+                System.out.println("please select proper location from 1-9");
+                userMove = input.nextInt();
+            }
+        } while (userMove >= index.length);
+
+        for (int i = 0; i < index.length; i++) {
+            if (userMove == i && index[i] == ' ') {
+                index[i] = userLetter;
+                showBoard();
+                break;
+            }
+        }
+    }
 }
